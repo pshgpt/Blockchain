@@ -47,12 +47,16 @@ public class BlockChain {
 	        	System.out.println("Blockchain size: "+blockchain.size());
 	            break;  
 	        case 5:  
+	        	if(blockchain.size()==0){
+				System.out.println("Blockchain is empty");
+			}
+			else {
+				
 	        	System.out.println("Enter the data to be searched");
-
-	        	 str=sc.next();
-   		 search(str);
-	        
-	            break;  
+	        	str=sc.next();
+	        	search(str);
+	        	break;  
+			}
 	        case 6:  
 	        	System.exit(0);
 	            break;  
