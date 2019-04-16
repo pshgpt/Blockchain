@@ -46,17 +46,15 @@ public class BlockChain {
 	        case 4:  
 	        	System.out.println("Blockchain size: "+blockchain.size());
 	            break;  
-	        case 5:  
-	        	if(blockchain.size()==0){
-				System.out.println("Blockchain is empty");
-			}
-			else {
+	        case 5:
+	        	 
 				
-	        	System.out.println("Enter the data to be searched");
-	        	str=sc.next();
-	        	search(str);
-	        	break;  
-			}
+				
+						System.out.println("Enter the data to be searched");
+						str=sc.next();
+						search(str);
+						break;  
+					
 	        case 6:  
 	        	System.exit(0);
 	            break;  
@@ -70,6 +68,10 @@ public class BlockChain {
 	   }	
         }
 	public static void search(String str) {
+		if(blockchain.size()==0){
+			System.out.println("Blockchain is empty");
+			 }
+		else {
 		for (int i=0; i<blockchain.size();i++) {
 			if(blockchain.get(i).getData().equals(str))
 			{
@@ -80,12 +82,12 @@ public class BlockChain {
 				System.out.println("Nonce: "+blockchain.get(i).getNonce());
 				
 			}
+			
 			else {
 				System.out.println("Invalid Search");
 			}
 		}
-			
-				
+		}	
 		}
 	
 	public static Boolean isChainValid() {
