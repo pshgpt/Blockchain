@@ -68,24 +68,27 @@ public class BlockChain {
 	   }	
         }
 	public static void search(String str) {
+		int count=0;
 		if(blockchain.size()==0){
 			System.out.println("Blockchain is empty");
 			 }
 		else {
 		for (int i=0; i<blockchain.size();i++) {
 			if(blockchain.get(i).getData().equals(str))
+				
 			{
 				System.out.println("Data: "+blockchain.get(i).getData());
 				System.out.println("Hash Value: "+blockchain.get(i).getHash());
 				System.out.println("Previous Hash: "+blockchain.get(i).getPreviousHash());
 				System.out.println("TimeStamp: "+blockchain.get(i).getTimeStamp());
 				System.out.println("Nonce: "+blockchain.get(i).getNonce());
+				count+=1;
 				
 			}
 			
-			else {
-				System.out.println("Invalid Search");
-			}
+		}
+		if(count==0) {
+			System.out.println("Invalid Search");
 		}
 		}	
 		}
