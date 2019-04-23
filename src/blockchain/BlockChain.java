@@ -67,7 +67,7 @@ public class BlockChain {
 	        ch = sc.nextInt();
 	   }	
         }
-	public static void search(String str) {
+	public static void search(String str){
 		Integer value=0;
 		int count=0;
 		List l = new ArrayList();
@@ -97,12 +97,13 @@ public class BlockChain {
 			System.out.println("Nonce: "+blockchain.get(j).getNonce());
 			}
 		}
+		else
+		{
+			System.out.println("Invalid Search");
+		}
 			
 		
 				}
-		if(count==0) {
-			System.out.println("Invalid Search");
-		}
 
 		}
 
